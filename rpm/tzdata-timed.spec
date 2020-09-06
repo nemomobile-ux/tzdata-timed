@@ -9,6 +9,9 @@ BuildArch:  noarch
 URL:        https://git.merproject.org/mer-core/tzdata-timed
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   tzdata
+%if 0%{?fedora}
+BuildRequires: pcre-tools
+%endif
 
 %description
 Timed daemon datafiles that combine information about time zones,
